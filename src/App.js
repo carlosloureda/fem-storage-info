@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
+
+import FileUpload from "./components/FileUpload/FileUpload";
 
 function App() {
-  return <div className="App">Holas</div>;
+  return <FileUpload />;
 }
 
 export default App;
