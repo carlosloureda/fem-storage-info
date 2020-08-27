@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+import FileExplorer from "./FileExplorer/FileExplorer";
+import StorageInfo from "./StorageInfo/StorageInfo";
+
 import DesktopBackground from "../../images/bg-desktop.png";
 import MobileBackground from "../../images/bg-mobile.png";
 
@@ -10,7 +13,7 @@ S.Container = styled.div`
   width: 100%;
   background: url(${DesktopBackground}) no-repeat;
   background-position: bottom;
-  background-size: contain;
+  background-size: 100% 50%;
   background-color: #0c122c;
   display: flex;
   justify-content: center;
@@ -21,11 +24,17 @@ S.Container = styled.div`
     background: url(${MobileBackground}) no-repeat;
     background-position: 50% 0%;
     background-size: initial;
+    flex-direction: column;
   }
 `;
 
 function FileUpload() {
-  return <S.Container>Main FileUpload component</S.Container>;
+  return (
+    <S.Container>
+      <FileExplorer />
+      <StorageInfo />
+    </S.Container>
+  );
 }
 
 export default FileUpload;
